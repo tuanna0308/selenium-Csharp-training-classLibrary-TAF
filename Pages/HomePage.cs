@@ -58,6 +58,7 @@ namespace TrainingCsharpSeleniumHomework.Pages
         public By LastNameInputBy => By.Id(HomePageUi.LAST_NAME_INPUT_ID);
         public By EmailInputBy => By.Id(HomePageUi.EMAIL_INPUT_ID);
         public By MaleGenderRadioBy => By.Id(HomePageUi.MALE_GENDER_RADIO_ID);
+        public By FeMaleGenderRadioBy => By.Id(HomePageUi.FEMALE_GENDER_RADIO_ID);
         public By MobileNumberInputBy => By.Id(HomePageUi.MOBILE_NUMBER_INPUT_ID);
         public By SubjectInputBy => By.Id(HomePageUi.SUBJECT_INPUT_ID);
         public By SportsCheckboxBy => By.Id(HomePageUi.SPORTS_CHECKBOX_ID);

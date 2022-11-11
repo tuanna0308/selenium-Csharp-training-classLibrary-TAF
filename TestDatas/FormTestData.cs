@@ -16,14 +16,18 @@ namespace TrainingCsharpSeleniumHomework.TestDatas
         public FormTestData()
         {
             configuration = JsonReaderUtil.GetDataFromJsonFile(Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + GlobalConstants.TEST_DATA_PATH + "FormTestData.json");
-            configuration.GetSection(GlobalConstants.FORM_TEST_DATA_1).Bind(this);
+            ListData = configuration.GetSection(GlobalConstants.FORM_TEST_DATA).Get<List<Data>>();
         }
 
-        //public string TestData1 { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string UserEmail { get; set; }
-        public string Gender { get; set; }
-        public string UserPhoneNumber { get; set; }
+        public List<Data> ListData { get; set; }
+
+        public class Data
+        {
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public string UserEmail { get; set; }
+            public string Gender { get; set; }
+            public string UserPhoneNumber { get; set; }
+        }
     }
 }

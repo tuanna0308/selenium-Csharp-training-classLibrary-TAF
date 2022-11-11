@@ -66,20 +66,29 @@ namespace TrainingCsharpSeleniumHomework.Tests
             Assert.That(HomePageUi.IMPRESSIVE_TEXT, Is.EqualTo(homePage.GetElementText(driver, homePage.ResultRadioButtonBy)));
         }
 
-        [Test]
-        public void TestForms()
+        private static List<FormTestData.Data> getData()
+        {
+            FormTestData formTestData = new FormTestData();
+            return formTestData.ListData;
+        }
+
+        [TestCaseSource(nameof(getData))]
+        public void TestForms(FormTestData.Data formTestData)
         {
             homePage.ScrollToElement(driver, homePage.MenuParentBy(HomePageUi.FORMS_TEXT));
             homePage.ClickToElement(driver, homePage.MenuParentBy(HomePageUi.FORMS_TEXT));
             homePage.ClickToElement(driver, homePage.MenuChildBy(HomePageUi.PRACTICE_FORM_TEXT));
 
-            FormTestData formTestData = new FormTestData();
-
             homePage.SendKeyToElement(driver, homePage.FirstNameInputBy, formTestData.FirstName);
             homePage.SendKeyToElement(driver, homePage.LastNameInputBy, formTestData.LastName);
             homePage.SendKeyToElement(driver, homePage.EmailInputBy, formTestData.UserEmail);
-            homePage.ClickToElementByJs(driver, homePage.MaleGenderRadioBy);
+            if (formTestData.Gender.Equals(HomePageUi.MALE_TEXT))
+                homePage.ClickToElementByJs(driver, homePage.MaleGenderRadioBy);
+            if (formTestData.Gender.Equals(HomePageUi.FEMALE_TEXT))
+                homePage.ClickToElementByJs(driver, homePage.FeMaleGenderRadioBy);
             homePage.SendKeyToElement(driver, homePage.MobileNumberInputBy, formTestData.UserPhoneNumber);
+
+
             homePage.ClickToElementByJs(driver, homePage.SportsCheckboxBy);
             homePage.ClickToElementByJs(driver, homePage.MusicCheckboxBy);
 

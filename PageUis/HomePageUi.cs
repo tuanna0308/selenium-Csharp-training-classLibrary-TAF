@@ -13,7 +13,7 @@ namespace TrainingCsharpSeleniumHomework.PageUis
         #endregion
 
         #region demoqa.com
-        public const string ELEMENT_XPATH = "//div[@class='card-body']/h5[text()='{0}']";
+        public const string ELEMENT_XPATH = "//h5[text()='{0}']/parent::div/preceding-sibling::div[@class='card-up']";
 
         #region Text Element
         public const string ELEMENTS_TEXT = "Elements";
@@ -28,12 +28,12 @@ namespace TrainingCsharpSeleniumHomework.PageUis
         public const string STUDENT_NAME_TEXT = "Student Name";
         public const string STUDENT_EMAIL_TEXT = "Student Email";
         public const string GENDER_TEXT = "Gender";
+        public const string MALE_TEXT = "Male";
+        public const string FEMALE_TEXT = "Female";
         public const string MOBILE_TEXT = "Mobile";
         public const string DATE_OF_BIRTH_TEXT = "Date of Birth";
         public const string SUBJECTS_TEXT = "Subjects";
         public const string HOBBIES_TEXT = "Hobbies";
-
-
         #endregion
 
         #region Checkbox
@@ -52,6 +52,7 @@ namespace TrainingCsharpSeleniumHomework.PageUis
         public const string LAST_NAME_INPUT_ID = "lastName";
         public const string EMAIL_INPUT_ID = "userEmail";
         public const string MALE_GENDER_RADIO_ID = "gender-radio-1";
+        public const string FEMALE_GENDER_RADIO_ID = "gender-radio-2";
         public const string MOBILE_NUMBER_INPUT_ID = "userNumber";
         public const string SUBJECT_INPUT_ID = "subjectsInput";
         public const string SPORTS_CHECKBOX_ID = "hobbies-checkbox-1";

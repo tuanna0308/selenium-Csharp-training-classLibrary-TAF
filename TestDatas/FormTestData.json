@@ -1,9 +1,18 @@
 ﻿{
-  "formTestData1": {
-    "firstName": "Tuan",
-    "lastName": "Nguyen4",
-    "userEmail": "Tuan_Nguyen4@epam.com",
-    "gender": "Male",
-    "userPhoneNumber": "0123456789"
-  }
+  "formTestDatas": [
+    {
+      "firstName": "Tuan",
+      "lastName": "Nguyen4",
+      "userEmail": "Tuan_Nguyen4@epam.com",
+      "gender": "Male",
+      "userPhoneNumber": "0123456789"
+    },
+    {
+      "firstName": "Kan",
+      "lastName": "Maridi",
+      "userEmail": "Kan_Maridi@epam.com",
+      "gender": "Female",
+      "userPhoneNumber": "0965236548"
+    }
+  ]
 }
