@@ -38,7 +38,7 @@ namespace PageObjectBase.Commons
             //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(Convert.ToDouble(ConfigurationSettings.AppSettings[GlobalConstants.SHORT_TIME_OUT]));
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
 
-            driver.Navigate().GoToUrl(ConfigurationManager.AppSettings[GlobalConstants.PAGE_URL]);
+            //driver.Navigate().GoToUrl(ConfigurationManager.AppSettings[GlobalConstants.PAGE_URL]);
             driver.Navigate().GoToUrl("https://demoqa.com/");
         }
 
