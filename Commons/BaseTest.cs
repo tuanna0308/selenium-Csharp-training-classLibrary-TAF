@@ -26,16 +26,17 @@ namespace PageObjectBase.Commons
         public void SetupDriver()
         {
             String b = "1";
-            Console.WriteLine("Console: ConfigurationManager.AppSettings[GlobalConstants.BROWSER].ToUpper(): " + ConfigurationManager.AppSettings[GlobalConstants.BROWSER].ToUpper());
-            Log.Info("ConfigurationManager.AppSettings[GlobalConstants.BROWSER].ToUpper(): " + ConfigurationManager.AppSettings[GlobalConstants.BROWSER].ToUpper());
+            Console.WriteLine("GlobalConstants.BROWSER: " + GlobalConstants.BROWSER);
+            Console.WriteLine("Console: ConfigurationManager.AppSettings[GlobalConstants.BROWSER].ToUpper(): " + ConfigurationSettings.AppSettings[GlobalConstants.BROWSER].ToUpper());
+            Log.Info("ConfigurationManager.AppSettings[GlobalConstants.BROWSER].ToUpper(): " + ConfigurationSettings.AppSettings[GlobalConstants.BROWSER].ToUpper());
 
-            string browser = ConfigurationManager.AppSettings[GlobalConstants.BROWSER].ToUpper();
+            string browser = ConfigurationSettings.AppSettings[GlobalConstants.BROWSER].ToUpper();
             BrowserType browserType = (BrowserType) Enum.Parse(typeof(BrowserType), browser);
             driver = DriverSingleton.GetDriverByBrowser(browserType);
 
             driver.Manage().Window.Maximize();
 
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(Convert.ToDouble(ConfigurationManager.AppSettings[GlobalConstants.SHORT_TIME_OUT]));
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(Convert.ToDouble(ConfigurationSettings.AppSettings[GlobalConstants.SHORT_TIME_OUT]));
 
             driver.Navigate().GoToUrl(ConfigurationManager.AppSettings[GlobalConstants.PAGE_URL]);
         }
