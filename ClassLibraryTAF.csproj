@@ -18,11 +18,7 @@
     <PackageReference Include="Selenium.Support" Version="3.141.0" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Base-TAF\PageObjectBase\PageObjectBase.csproj" />
-    <ProjectReference Include="..\Base-TAF\UtilitiesBase\UtilitiesBase.csproj" />
+    <PackageReference Include="WebDriverManager" Version="2.16.1" />
   </ItemGroup>
 
   <ItemGroup>
