@@ -25,7 +25,7 @@
     <None Update="log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="TestDatas\FormTestData.json">
+    <None Update="DataTest\FormTestData.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="app.config">

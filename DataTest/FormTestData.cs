@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UtilitiesBase;
 
-namespace TrainingCsharpSeleniumHomework.TestDatas
+namespace TrainingCsharpSeleniumHomework.DataTest
 {
     public class FormTestData
     {

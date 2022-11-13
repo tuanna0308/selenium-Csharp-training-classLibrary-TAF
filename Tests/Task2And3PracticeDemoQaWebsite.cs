@@ -8,9 +8,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrainingCsharpSeleniumHomework.DataTest;
 using TrainingCsharpSeleniumHomework.Pages;
 using TrainingCsharpSeleniumHomework.PageUis;
-using TrainingCsharpSeleniumHomework.TestDatas;
 using UtilitiesBase;
 
 namespace TrainingCsharpSeleniumHomework.Tests
