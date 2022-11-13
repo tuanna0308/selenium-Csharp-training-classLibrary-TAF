@@ -66,7 +66,7 @@ namespace TrainingCsharpSeleniumHomework.Tests
             Assert.That(HomePageUi.IMPRESSIVE_TEXT, Is.EqualTo(homePage.GetElementText(driver, homePage.ResultRadioButtonBy)));
         }
 
-        static List<FormTestData.Data> getData()
+        public static List<FormTestData.Data> getData()
         {
             FormTestData formTestData = new FormTestData();
             return formTestData.ListData;
