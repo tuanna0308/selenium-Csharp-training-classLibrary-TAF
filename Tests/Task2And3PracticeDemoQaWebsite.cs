@@ -15,6 +15,7 @@ using UtilitiesBase;
 
 namespace TrainingCsharpSeleniumHomework.Tests
 {
+    [TestFixture]
     public class Task2And3PracticeDemoQaWebsite : BaseTest
     {
         HomePage homePage;
@@ -72,7 +73,7 @@ namespace TrainingCsharpSeleniumHomework.Tests
             return formTestData.ListData;
         }
 
-        [TestCaseSource(nameof(getData))]
+        [Test, TestCaseSource(nameof(getData))]
         public void TestForms(FormTestData.Data formTestData)
         {
             homePage.ScrollToElement(driver, homePage.MenuParentBy(HomePageUi.FORMS_TEXT));
