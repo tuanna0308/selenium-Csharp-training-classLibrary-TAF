@@ -73,7 +73,7 @@ namespace TrainingCsharpSeleniumHomework.Tests
             return formTestData.ListData;
         }
 
-        [Test, TestCaseSource(nameof(getData))]
+        //[Test, TestCaseSource(nameof(getData))]
         public void TestForms(FormTestData.Data formTestData)
         {
             homePage.ScrollToElement(driver, homePage.MenuParentBy(HomePageUi.FORMS_TEXT));
